@@ -5,7 +5,7 @@ import { clearTokens } from "../../utils/constants";
 const staticServerUri = process.env.REACT_APP_PATH || "";
 
 export const instance = axios.create({
-    baseURL : staticServerUri, // production level 에서는 env에서 넣어주어야함(보안 관련)
+    baseURL : staticServerUri + "/api", // production level 에서는 env에서 넣어주어야함(보안 관련)
     timeout : 1000, // 타임아웃이 없으면 무한정 wait가 걸려버릴 수도 있다!
     headers : {
         "Content-Type" : "application/json"  // 서버단에서 이런 형태를 많이써서, 프론트단에서 쏴줄 때 이렇게 많이 쓴다.
