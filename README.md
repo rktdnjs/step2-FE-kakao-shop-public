@@ -453,7 +453,7 @@ UI 컴포넌트의 명칭과 이를 구현하는 능력은 필수적인 커뮤�
 ## 완선된 프로젝트 관련 Notion 정리글
 
 ```
-https://bronzed-amount-986.notion.site/23-08-03-732eb61027034353b7a3b7315ea41afe?pvs=4
+https://bronzed-amount-986.notion.site/c924889f34cf4cb7bfe8c51f9a1f8df1?pvs=4
 ```
 
 ## 완성 프로젝트 URL(~8.16 까지 유효함)
