@@ -4,13 +4,14 @@ import Photo from "../atoms/Photo";
 import { comma } from "../../utils/comma";
 import "../../styles/ProductCard.css";
 
+const staticServerUri = process.env.REACT_APP_PATH || "";
 
 const ProductCard = ({ product, loading }) => {
     return (
         <>
             {loading 
             ? <SkeletonCard/> 
-            : <Card to={`/product/${product.id}`}>
+            : <Card to={`${staticServerUri}/product/${product.id}`}>
                 <Photo src={product.image} alt={product.productName}/>
                 <div className="product-name">{product.productName}</div>
                 <div className="product-price">{comma(product.price)}원</div>

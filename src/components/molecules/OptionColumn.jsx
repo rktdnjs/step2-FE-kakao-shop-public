@@ -9,6 +9,8 @@ import Swal from "sweetalert2";
 import OptionList from "../atoms/OptionList";
 import Counter from "../atoms/Counter";
 
+const staticServerUri = process.env.REACT_APP_PATH || "";
+
 const OptionColumn = ({ product }) => {
     /**
      * 사용자가 담은 옵션을 처리함
@@ -119,12 +121,12 @@ const OptionColumn = ({ product }) => {
                             token 
                             ? Swal.fire(cartSuccessMessage) 
                             : Swal.fire(cartLoginNeedMessage)
-                            .then(navigate("/login"))
+                            .then(navigate(staticServerUri + "/login"))
                         },
                         onError: () => {
                             // 적절하지 않은 값에 대해 장바구니 담기 - 에러 핸들링 처리
                             Swal.fire(cartFailedMessage)
-                            .then(navigate("/notFoundPage"))
+                            .then(navigate(staticServerUri + "/notFoundPage"))
                         }
                     });
                 }}>장바구니 담기</BasketButton>
@@ -138,14 +140,14 @@ const OptionColumn = ({ product }) => {
                         onSuccess: () => {
                             token 
                             ? Swal.fire(cartSuccessGoBasketMessage)
-                            .then(navigate("/cart"))
+                            .then(navigate(staticServerUri + "/cart"))
                             : Swal.fire(cartLoginNeedMessage)
-                            .then(navigate("/login"))
+                            .then(navigate(staticServerUri + "/login"))
                         },
                         onError: () => {
                             // 적절하지 않은 값에 대해 장바구니 담기 - 에러 핸들링 처리
                             Swal.fire(cartFailedMessage)
-                            .then(navigate("/notFoundPage"))
+                            .then(navigate(staticServerUri + "/notFoundPage"))
                         }
                     });
                 }} >구매</PurchaseButton>

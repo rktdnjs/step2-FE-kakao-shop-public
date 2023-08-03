@@ -8,6 +8,8 @@ import { useNavigate } from 'react-router-dom';
 import { useEffect } from 'react';
 
 // 장바구니 페이지
+const staticServerUri = process.env.REACT_APP_PATH || "";
+
 const CartPage = () => {
     const token = localStorage.getItem("token");
     const navigate = useNavigate();
@@ -16,7 +18,7 @@ const CartPage = () => {
     useEffect(() => {
         if(localStorage.getItem("token") == null) {
             Swal.fire(loginNeedMessage);
-            navigate("/login");
+            navigate(staticServerUri + "/login");
         }
     }, [navigate])
 

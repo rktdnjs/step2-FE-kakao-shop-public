@@ -1,5 +1,6 @@
 import Box from './../atoms/Box';
 import CartItem from '../atoms/CartItem';
+import Swal from 'sweetalert2';
 import { comma } from './../../utils/comma';
 import { useNavigate } from 'react-router-dom';
 import { useState, useEffect, useCallback } from 'react';
@@ -8,8 +9,9 @@ import { updateCart } from '../services/cart';
 import { styled } from 'styled-components';
 import { getCart } from '../services/cart';
 import { useQuery } from '@tanstack/react-query';
-import Swal from 'sweetalert2';
 import { cartNoItemMessage } from '../../utils/constants';
+
+const staticServerUri = process.env.REACT_APP_PATH || "";
 
 const CartList = () => {
     const navigate = useNavigate();
@@ -25,7 +27,7 @@ const CartList = () => {
             // CartItem 내부 함수 분리 후 업데이트 내용이 잘 적용되어 navigate로 복귀
             // console.log("업데이트 내역", updatePayload);
             // console.log("최종 카트 아이템 내역", cartItems);
-            navigate("/order");
+            navigate(staticServerUri + "/order");
         },
         onError: (error) => {
             // console.log(error.status);
@@ -35,7 +37,7 @@ const CartList = () => {
             // 404 에러 : 에러 메세지 확인 + 에러 페이지로 이동
             // 그 외 에러 : 에러 메세지 확인 + 에러 페이지로 이동
             if (error.status !== 401) {
-                navigate("/error");
+                navigate(staticServerUri + "/error");
             }
         }
     })
@@ -137,7 +139,7 @@ const CartList = () => {
                         // post 요청
                         if(totalPrice === 0) {
                             Swal.fire(cartNoItemMessage);
-                            navigate("/")
+                            navigate(staticServerUri + "/")
                         } else {
                             mutate(updatePayload)
                         }

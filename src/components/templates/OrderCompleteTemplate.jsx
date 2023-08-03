@@ -7,6 +7,8 @@ import { useEffect, useState } from "react";
 import { comma } from './../../utils/comma';
 import OptiomItem from "../atoms/OptiomItem";
 
+const staticServerUri = process.env.REACT_APP_PATH || "";
+
 const OrderCompleteTemplate = () => {
     const navigate = useNavigate();
     const { id } = useParams();
@@ -49,7 +51,7 @@ const OrderCompleteTemplate = () => {
                     <div>일반 결제 금액</div>
                     <div>{comma(totalPrice)}원</div>
                 </PriceResultBox>
-                <div className="shopping-go" onClick={() => navigate("/")}> 
+                <div className="shopping-go" onClick={() => navigate(staticServerUri + "/")}> 
                     쇼핑 계속하기
                 </div>
             </OrderDetailBox>

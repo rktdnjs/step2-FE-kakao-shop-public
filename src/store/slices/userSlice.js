@@ -4,6 +4,7 @@ import { createSlice, createAsyncThunk } from "@reduxjs/toolkit"
 import { login } from "../../components/services/user";
 import Swal from 'sweetalert2'
 // import { useNavigate } from "react-router-dom"; // 사용해봤으나 로직이 작동하지 않음
+const staticServerUri = process.env.REACT_APP_PATH || "";
 
 const initialState = {
     email: null,
@@ -80,7 +81,7 @@ export const loginRequest = createAsyncThunk(
                 localStorage.setItem("tokenExpiration", expirationDate);
             })
             .then(() => {
-                window.location.href = "/";
+                window.location.href = staticServerUri + "/";
                 // const navigate = useNavigate();
                 // navigate("/");
             })

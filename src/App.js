@@ -15,6 +15,7 @@ import Footer from './components/atoms/Footer';
 import './styles/App.css';
 
 // CSS 기본 속성 초기화 필요
+const staticServerUri = process.env.REACT_APP_PATH || "";
 
 function App() {
     // 최상단에서 토큰 관련 로그인을 관리할 수 있게 App에서 import 하여 사용
@@ -28,14 +29,14 @@ function App() {
         <BrowserRouter>
             <GNB/>
             <Routes>
-                <Route path="/" element={<HomePage/>}/>
-                <Route path="/login" element={<LoginPage/>}/>
-                <Route path="/register" element={<RegisterPage/>}/>
-                <Route path="/product/:id" element={<ProductDetailPage/>}/>
-                <Route path="cart" element={<CartPage/>}/>
-                <Route path="order" element={<OrderPage/>}/>
-                <Route path="orders/complete/:id" element={<OrderCompletePage/>}/>
-                <Route path="/*" element={<NotFoundPage/>}/>
+                <Route path={staticServerUri + "/"} element={<HomePage/>}/>
+                <Route path={staticServerUri + "/login"} element={<LoginPage/>}/>
+                <Route path={staticServerUri + "/register"} element={<RegisterPage/>}/>
+                <Route path={staticServerUri + "/product/:id"} element={<ProductDetailPage/>}/>
+                <Route path={staticServerUri + "cart"} element={<CartPage/>}/>
+                <Route path={staticServerUri + "order"} element={<OrderPage/>}/>
+                <Route path={staticServerUri + "orders/complete/:id"} element={<OrderCompletePage/>}/>
+                <Route path={staticServerUri + "/*"} element={<NotFoundPage/>}/>
             </Routes>
             <Footer/>
         </BrowserRouter>

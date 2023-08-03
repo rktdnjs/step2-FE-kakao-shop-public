@@ -1,10 +1,12 @@
 import { useNavigate } from "react-router-dom"
 import { styled } from 'styled-components';
 
+const staticServerUri = process.env.REACT_APP_PATH || "";
+
 const NotFoundPage = () => {
     const navigate = useNavigate();
     const goMain = () => {
-        navigate("/")
+        navigate(staticServerUri + "/")
     }
 
     return (

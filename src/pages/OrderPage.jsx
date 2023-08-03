@@ -7,6 +7,8 @@ import { useNavigate } from 'react-router-dom';
 import { useEffect } from 'react';
 import { styled } from 'styled-components';
 
+const staticServerUri = process.env.REACT_APP_PATH || "";
+
 const OrderPage = () => {
     const navigate = useNavigate();
 
@@ -14,7 +16,7 @@ const OrderPage = () => {
     useEffect(() => {
         if(localStorage.getItem("token") == null) {
             Swal.fire(loginNeedMessage);
-            navigate("/login");
+            navigate(staticServerUri + "/login");
         }
     }, [navigate])
 

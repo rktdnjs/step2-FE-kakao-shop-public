@@ -2,6 +2,7 @@ import Swal from 'sweetalert2'
 import { instance } from './index';
 import { registerWelcomeMessage } from "../../utils/constants";
 
+const staticServerUri = process.env.REACT_APP_PATH || "";
 // 백엔드 요청!
 // 데이터 객체를 정확히 명시해주면 좋다. 데이터가 무엇을 의미하는지 알 수 있게!
 // 데이터 객체에 엉뚱한 내용이 들어가는것을 방지할 수 있다.
@@ -17,7 +18,7 @@ export const register = (data) => {
     .then(() => {
         Swal.fire(registerWelcomeMessage)
         .then(() => {
-            window.location.href = "/";
+            window.location.href = staticServerUri + "/";
         })
     })
     .catch((error) => {

@@ -8,6 +8,8 @@ import { order } from './../services/orders';
 import { orderCompleteMessage, agreeNeedMessage } from '../../utils/constants';
 import Swal from 'sweetalert2';
 
+const staticServerUri = process.env.REACT_APP_PATH || "";
+
 const OrderTemplate = () => {
     const { data } = useQuery(["/order"], getCart);
     const [products, setProducts] = useState([]);
@@ -41,7 +43,7 @@ const OrderTemplate = () => {
         onSuccess: (res) => {
             const id = res.data.response.id;
             Swal.fire(orderCompleteMessage);
-            navigate(`/orders/complete/${id}`);
+            navigate(`${staticServerUri}/orders/complete/${id}`);
         },
         onError: (error) => {
             // console.log(error.status);
@@ -51,7 +53,7 @@ const OrderTemplate = () => {
             // 404 에러 : 에러 메세지 확인 + 에러 페이지로 이동
             // 그 외 에러 : 에러 메세지 확인 + 에러 페이지로 이동
             if (error.status !== 401) {
-                navigate("/error");
+                navigate(staticServerUri + "/error");
             }
         }
     })

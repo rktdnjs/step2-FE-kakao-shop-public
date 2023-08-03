@@ -2,6 +2,8 @@ import axios from "axios"
 import Swal from 'sweetalert2'
 import { clearTokens } from "../../utils/constants";
 
+const staticServerUri = process.env.REACT_APP_PATH || "";
+
 export const instance = axios.create({
     baseURL : process.env.REACT_APP_API_URL, // production level 에서는 env에서 넣어주어야함(보안 관련)
     timeout : 1000, // 타임아웃이 없으면 무한정 wait가 걸려버릴 수도 있다!
@@ -46,7 +48,7 @@ instance.interceptors.response.use(
                 confirmButtonText: '확인',
             })
             .then(() => {
-                window.location.href = "/login";
+                window.location.href = staticServerUri + "/login";
             })
             return Promise.resolve();
         }
