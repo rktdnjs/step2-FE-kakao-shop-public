@@ -1,4 +1,5 @@
 <details>
+
 <summary>Step-2.-Week-1</summary>
 <div>
   
@@ -408,7 +409,7 @@ UI 컴포넌트의 명칭과 이를 구현하는 능력은 필수적인 커뮤�
 
 
 <details>
-<summary>Step-2.-Week-6</summary>
+<summary>Step-2.-Week-6 (완성된 프로젝트의 결과물은 여기에서 자세히 설명!)</summary>
 <div>
 
 ## 카카오 테크 캠퍼스 2단계 - FE - 6주차 클론 과제
@@ -449,30 +450,215 @@ UI 컴포넌트의 명칭과 이를 구현하는 능력은 필수적인 커뮤�
 - 포함될 내용은 배포 순서, 배포에 영향 받는 브랜치, 배포시 주의 사항, 배포 환경 등 다른 개발자가 해당 프로젝트를 인수인계 받았을 때 문제가 없도록 꼼꼼히 작성합니다.
 ```
 
-</br>
+## 완선된 프로젝트 관련 Notion 정리글
 
-## **과제 상세 : 수강생들이 과제를 진행할 때, 유념해야할 것**
 ```
-1. 많은 서비스가 개발 레벨에서는 잘 작동하다가도 배포 단계에서 에러를 만나는 경우가 많습니다. 배포 후에 기능을 하나하나 점검해보고, 여러 환경에서 시도해보세요.
-
-2. 배포된 환경을 하나의 브라우저에서만 테스트하지 말고, 최대한 다양한 디바이스와 브라우저에서 테스트해보세요. 삼성 브라우저, 아이폰 사파리, 데스크탑이라면 크롬, 사파리, 파이어폭스 등으로 테스트해보세요.
-
-3. 코드를 시간이 지나서 보면 어떤 목적으로, 왜 만들었는지 알아보기 힘든 경우가 많습니다. 기본적인 내용이라 생각한 부분도 주석을 달아주세요.
+https://bronzed-amount-986.notion.site/23-08-03-732eb61027034353b7a3b7315ea41afe?pvs=4
 ```
-</br>
 
-## **코드리뷰 관련: PR시, 아래 내용을 포함하여 코멘트 남겨주세요.**
-**1. PR 제목과 내용을 아래와 같이 작성 해주세요.**
+## 완성 프로젝트 URL(~8.16 까지 유효함)
 
->- PR 제목 : 부산대FE_라이언_6주차 과제
+```
+https://user-app.krampoline.com/k948de2e6d478a/
+```
 
-</br>
+## 완성된 프로젝트 UI & UX
 
-**2. PR 내용 :**
+> **메인 화면**
 
->- 코드 작성하면서 어려웠던 점
->- 코드 리뷰 시, 멘토님이 중점적으로 리뷰해줬으면 하는 부분
+![image](https://github.com/rktdnjs/step2-FE-kakao-shop2/assets/67001905/5fee3f24-43aa-4845-80c9-5beb92df79fc)
 
+> **회원가입 화면**
+
+![image](https://github.com/rktdnjs/step2-FE-kakao-shop2/assets/67001905/196bfbf0-6f52-44c7-b2a8-dbc11f7ed0b3)
+
+
+> **로그인 화면**
+
+![image](https://github.com/rktdnjs/step2-FE-kakao-shop2/assets/67001905/862f4989-92d3-4d33-adb4-00f896620520)
+
+> **장바구니(로그인 필요)**
+
+![장바구니(로그인 필요)](https://github.com/rktdnjs/step2-FE-kakao-shop2/assets/67001905/e52fdb46-efb8-4c39-87f2-7a8b051b07e7)
+
+> **물품 장바구니 담기**
+
+![물품 장바구니 담기](https://github.com/rktdnjs/step2-FE-kakao-shop2/assets/67001905/c1f558b3-7df3-4e6d-8cd6-a3225f99ed9d)
+
+> **장바구니 물건 구입**
+
+![장바구니 물건 구입](https://github.com/rktdnjs/step2-FE-kakao-shop2/assets/67001905/b1cb5336-4c33-4af1-938d-0ba664910d08)
+
+## 프로젝트 배포 환경
+
+![image](https://github.com/rktdnjs/step2-FE-kakao-shop2/assets/67001905/52c9fa45-992e-4076-a4bc-f80dbe32e679)
+
+```
+리액트 환경에서 개발 후 카카오 크램폴린 IDE에서 Github 연동을 통해 프로젝트 배포 과정을 거침.
+```
+
+## 프로젝트 배포와 관련된 브랜치
+
+```
+https://github.com/rktdnjs/step2-FE-kakao-shop2/tree/main
+위 링크의 main 브랜치와 관련된 내용이 배포에 사용된다.
+개발을 진행해오던 feat-ShinHyoWon 브랜치와 별개로 개발 완료 이후 main 브랜치에서 추가 환경설정 후 배포를 진행하였습니다!
+```
+
+## 🎁배포 과정 & 배포시 주의 사항🎁
+
+> **FrontEnd 코드가 포함된 소스 저장소 준비하기(Repo의 main 브랜치가 있어야 배포 가능)**
+
+![image](https://github.com/rktdnjs/step2-FE-kakao-shop2/assets/67001905/663fa4b6-6e76-4cbc-92c8-3e1fad295c18)
+
+> **React App의 Static Path 관련된 설정을 진행한다(중요)**
+
+```
+카카오 크램폴린 IDE로 배포할 시 주의할 점 중 하나인 Static Path 관련된 내용
+- 카카오 크램폴린으로 배포한 앱은 https://user-app.krampoline.com/[uid]의 형식을 가짐
+- 따라서 앱 배포시 URL Path에 대한 처리가 추가적으로 필요함.
+- FE에서 사용하는 정적 파일들의 경로 혹은 리액트 라우터와 관련된 Path 부분의 수정이 필요!
+- 자세하게 봐주어야 하는 부분은 react-router-dom & window.location.href 파트!
+- 위와 같은 링크에는 prefix로 staticServerUri 변수를 정의하여 끼워넣어주어야 한다.
+```
+
+```jsx
+// 참고로 이번 배포의 경우 카카오 크램폴린 IDE kargo배포시 사용자의 UID를 자동으로 반영하도록 .env 파일이 만들어지도록 사전 설정이 되어있기 때문에 혹여나 나중에 배포할 때는 이 점을 유의하도록 하자.
+// https://user-app.krampoline.com/k948de2e6d478a/ 이런식의 staticServerUri + UID 형태
+// 아래는 그 예시!
+const staticServerUri = process.env.REACT_APP_PATH || "";
+
+<BrowserRouter>
+            <GNB/>
+            <Routes>
+                <Route path={staticServerUri + "/"} element={<HomePage/>}/>
+                <Route path={staticServerUri + "/login"} element={<LoginPage/>}/>
+                <Route path={staticServerUri + "/register"} element={<RegisterPage/>}/>
+                <Route path={staticServerUri + "/product/:id"} element={<ProductDetailPage/>}/>
+                <Route path={staticServerUri + "/cart"} element={<CartPage/>}/>
+                <Route path={staticServerUri + "/order"} element={<OrderPage/>}/>
+                <Route path={staticServerUri + "/orders/complete/:id"} element={<OrderCompletePage/>}/>
+                <Route path={staticServerUri + "/*"} element={<NotFoundPage/>}/>
+            </Routes>
+            <Footer/>
+        </BrowserRouter>
+```
+
+```jsx
+// navigate도 변경
+const staticServerUri = process.env.REACT_APP_PATH || "";
+
+const logout = () => {
+    clearTokens();
+    Swal.fire(logoutMessage)
+    .then(() => {
+        navigate(staticServerUri + "/"); 
+    })
+}
+```
+
+```jsx
+// Link를 사용한 부분도 변경
+<div className="navbar">
+    {/* {email 
+    ? <span className="navbarMenu">{email}님 안녕하세요!</span> 
+    : <></>} */}
+    <Link className="navbarMenu logo" to={staticServerUri + "/"}><LogoIcon /> 쇼핑하기</Link>
+    <Link className="navbarMenu cart" to={staticServerUri + "/cart"}>장바구니</Link>
+    <div className="divider"></div>
+    <Link className="navbarMenu register" to={staticServerUri + "/register"}>회원가입</Link>
+    {token 
+    ? <Link className="navbarMenu logout" onClick={logout}>로그아웃</Link> 
+    : <Link className="navbarMenu login" to={staticServerUri + "/login"}>로그인</Link>}
+</div>
+```
+
+> **default.conf 파일 생성 및 nginx 설정 진행**
+
+![image](https://github.com/rktdnjs/step2-FE-kakao-shop2/assets/67001905/e78e6edb-dc83-4c50-8f8d-e05e9463aa49)
+
+```
+server {
+	server_name _;
+	
+	location / {
+		proxy_pass http://localhost:3000;
+	}
+	location /api/ {
+		proxy_pass http://backend-service.default.svc.cluster.local:8080/;
+	}
+}
+```
+
+> **D2Hub 이미지 빌드에 필요한 Dockerfile 생성 및 코드 입력**
+
+![image](https://github.com/rktdnjs/step2-FE-kakao-shop2/assets/67001905/af3dd539-01ad-4db4-ac50-580d4b4b636a)
+
+```
+FROM krmp-d2hub-idock.9rum.cc/goorm/node:16
+WORKDIR /usr/src/app
+COPY package*.json ./
+RUN npm ci
+COPY . .
+
+RUN apt-get update && \
+	apt-get install -y nginx && \
+	rm -rf /var/lib/apt/lists/* && \
+	rm /etc/nginx/sites-enabled/default
+COPY default.conf /etc/nginx/conf.d/
+
+RUN npm install -g serve
+
+CMD npm run build && service nginx start && serve -s build
+```
+
+> **변경된 사항이 있을 경우 main 브랜치(배포 할 브랜치)로 push 후 pull - 빌드 - 배포 반복**
+
+![image](https://github.com/rktdnjs/step2-FE-kakao-shop2/assets/67001905/2e1684a5-9989-4852-bd00-7939d28a34d6)
+
+
+> **크램폴린 IDE에서 리액트 기반 컨테이너에 자신의 Github 프로젝트를 연동시킴!**
+
+```
+주의 : 이 때 자신의 깃허브 프로젝트 이름과 컨테이너의 이름이 동일해야 함
+```
+
+![image](https://github.com/rktdnjs/step2-FE-kakao-shop2/assets/67001905/e49f0782-d78d-4d2b-84d6-6146f6bc5306)
+
+![image](https://github.com/rktdnjs/step2-FE-kakao-shop2/assets/67001905/01b939aa-42e5-4566-bc44-64c31bbfa3f9)
+
+> **Kargo 탭을 눌러 앱 실행하기 클릭 - 배포하기 클릭**
+
+![image](https://github.com/rktdnjs/step2-FE-kakao-shop2/assets/67001905/90dd0b64-12a8-4f08-a36d-9d5a06a94ebc)
+
+![image](https://github.com/rktdnjs/step2-FE-kakao-shop2/assets/67001905/f382811d-af6d-408a-b6e6-8e9662979ab5)
+
+```
+배포가 전부 끝나게 되면 알림창과 함께 접속할 수 있는 URL을 얻을 수 있다!
+```
+
+> **배포후 사이트 접속**
+
+![image](https://github.com/rktdnjs/step2-FE-kakao-shop2/assets/67001905/f63a38ce-e785-470d-a6a8-53717823f02e)
+
+> **배포했던 앱의 로그를 확인해보고 싶을 경우**
+
+```bash
+$ kubectl get pods // 배포된 pod의 목록 조회
+// 이후 뜨는 화면에서 로그를 확인하고 싶은 pod의 '이름'을 복사해서 다음 명령어 실행
+$ kubectl log frontend-5b88bb75f8-dtn61
+```
+
+> **그 외 약간의 주의 사항**
+
+![image](https://github.com/rktdnjs/step2-FE-kakao-shop2/assets/67001905/deffc1de-697b-4943-a58a-ae7043dd16d8)
+
+![image](https://github.com/rktdnjs/step2-FE-kakao-shop2/assets/67001905/f2c47381-5cae-408c-b85c-2fbda4ed0f9e)
+
+```bash
+이런식으로 깊게 코드가 연관되어 들어가는 경우, 이에 대한 URL을 정확히 해주어야 한다.
+그래야 렌더링 상에 문제가 발생하지 않는다!
+```
 
 </div>
 </details>
