@@ -33,9 +33,9 @@ function App() {
                 <Route path={staticServerUri + "/login"} element={<LoginPage/>}/>
                 <Route path={staticServerUri + "/register"} element={<RegisterPage/>}/>
                 <Route path={staticServerUri + "/product/:id"} element={<ProductDetailPage/>}/>
-                <Route path={staticServerUri + "cart"} element={<CartPage/>}/>
-                <Route path={staticServerUri + "order"} element={<OrderPage/>}/>
-                <Route path={staticServerUri + "orders/complete/:id"} element={<OrderCompletePage/>}/>
+                <Route path={staticServerUri + "/cart"} element={<CartPage/>}/>
+                <Route path={staticServerUri + "/order"} element={<OrderPage/>}/>
+                <Route path={staticServerUri + "/orders/complete/:id"} element={<OrderCompletePage/>}/>
                 <Route path={staticServerUri + "/*"} element={<NotFoundPage/>}/>
             </Routes>
             <Footer/>

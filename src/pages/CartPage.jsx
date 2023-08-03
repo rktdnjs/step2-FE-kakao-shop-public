@@ -16,11 +16,11 @@ const CartPage = () => {
 
     // 장바구니 페이지에서 만약 로그인이 만료되었을 경우 로그인 페이지로 이동
     useEffect(() => {
-        if(localStorage.getItem("token") == null) {
+        if(token == null) {
             Swal.fire(loginNeedMessage);
             navigate(staticServerUri + "/login");
         }
-    }, [navigate])
+    }, [])
 
     return (
         <CartPageContainer>
